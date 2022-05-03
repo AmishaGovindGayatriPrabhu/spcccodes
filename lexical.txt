@@ -1,0 +1,19 @@
+import keyword
+
+operators=['=','+','-','/','*']
+symbol=['$','&','@','#','!']
+string=input("Please enter the string:\n").split(' ')
+for i in string:
+    if(keyword.iskeyword(i)==True):
+        print("keyword")
+    elif(i.isalpha()==True):
+        print("identifier")
+    elif(i.isdigit()==True):
+        print("constant")
+    elif(i in operators):
+        print("operator")
+    elif(i in symbol):
+        print("symbol")
+    else:
+        print("wrong input")
+        
